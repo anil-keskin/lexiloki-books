@@ -1,0 +1,6 @@
+html, body {
+  margin: 0; height: 100%; background: #2b2f6b; overflow: hidden;
+  display: flex; align-items: center; justify-content: center;
+  -webkit-user-select: none; user-select: none; -webkit-tap-highlight-color: transparent;
+}
+canvas { display: block; touch-action: none; border-radius: 8px; }
