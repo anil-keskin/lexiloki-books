@@ -8,7 +8,7 @@ fetch('books.json', { cache: 'no-cache' }).then(r => r.json()).then(list => {
     const a = document.createElement('a');
     a.className = 'book'; a.href = DL + encodeURIComponent(b.file); a.rel = 'noopener';
     const img = document.createElement('img');
-    img.src = 'covers/' + String(b.n).padStart(3, '0') + '.jpg'; img.alt = 'Cover: ' + b.title; img.loading = 'lazy';
+    img.src = 'covers/' + String(b.n).padStart(3, '0') + '.jpg'; img.alt = 'Cover: ' + b.title; if (b.n > 8) img.loading = 'lazy';
     const t = document.createElement('h2'); t.textContent = b.n + '. ' + b.title;   // textContent: no HTML injection
     const r = document.createElement('p'); r.textContent = b.rule;
     const dl = document.createElement('span'); dl.className = 'dl'; dl.textContent = 'Download PDF';
